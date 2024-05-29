@@ -1,0 +1,59 @@
+.menu-icon {
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #333333;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.menu {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333333;
+  overflow-x: hidden;
+  z-index: 999;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: end;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.menu.active {
+  width: 250px;
+  right: 0;
+}
+
+.menu button {
+  width: 55px;
+  height: 55px;
+  font-size: 24px;
+  border: none;
+  background: #ffa0a0;
+}

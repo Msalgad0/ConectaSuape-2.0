@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="index.css">
+    <meta name="theme-color" content="#181A1B">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="manifest/icon-192x192.png" type="image/x-icon">
+
+    <!-- link para as fontes que foram pegas no https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Conecta Suape</title>
+</head>
+
+<body>
+
+    <img src="img/logo.png" alt="">
+
+    <!-- classe geral que cuida de todo o formulario -->
+    <div class="form">
+
+        <!-- classe que engloba ambos os inputs e os textos -->
+        <div class="inputs">
+
+            <!-- classe especifica de cada input e texto (tanto o de login quanto o de senha) -->
+            <div class="input">
+                <span>Login: </span>
+                <input type="email" placeholder="Insira o seu email aqui">
+            </div>
+
+            <div class="input">
+                <span>Senha: </span>
+                <input type="password" placeholder="Insira sua senha aqui">
+            </div>
+        </div>
+
+        <!-- botao -->
+        <a href="./Page/pagina00.html" class="butao">ENTRAR</a>
+
+        <!-- links de esqueci a senha e nao tenho conta -->
+        <a href="#" class="sublink">Nao tenho um conta</a>
+        <a href="#" class="sublink">Esqueci minha senha</a>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            if ('serviceWorker' in navigator) {
+                console.log('has serviceworker');
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('serviceWorker.js')
+                        .then((registration) => {
+                            console.log('Service worker registered.', registration);
+                        });
+                });
+            }
+                console.log("Your browser not supports serviceWorkers");
+            }
+        );
+    </script>
+</body>
+
+</html>

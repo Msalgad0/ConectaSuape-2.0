@@ -1,0 +1,107 @@
+/* ---------- Tags ---------- */
+
+/* geral da pagina */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* remove o outline(bordas) do input */
+input:focus {
+    outline: none;
+}
+
+/* corpo do html (diferente do * pq ele pega acima desse body) */
+body {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #181A1B;
+    color: #ececec;
+
+
+    margin-top: 100px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- Class ---------- */
+
+/* classe do formulario de login (geral) */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    text-align: center;
+}
+
+/* classe que engloba os dois inputs(login e senha) e os textos da legenda de cada um */
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* classe dos inputs do formulario(possui tanto os inputs quanto os textos de "login:" e "senha:") */
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    text-align: start;
+}
+
+/* estilizacao especifica dos inputs */
+.input input {
+    font-size: 24px;
+    padding: 2px 8px;
+
+    border-radius: 4px;
+
+    border: none;
+}
+
+/* estilizacao especifica dos textos */
+.input span {
+    font-size: 18px;
+}
+
+/* estilizacao dos links que ficam em baixo (esqueci a senha e nao tenho conta) */
+.sublink {
+    color: #868686;
+    text-decoration: none;
+}
+
+/* estilizacao do botao de entrar */
+.butao {
+    display: flex;
+    text-decoration: none;
+
+    justify-content: center;
+
+    color: #ececec;
+    background-color: #4F4F4F;
+
+    padding: 10px 0;
+
+    border-radius: 4px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ---------- Actives (bagulho pra deixar mais bonitinho quando clica) ---------- */
+.sublink:active {
+    text-decoration: underline;
+    transition: all 0.5s;
+}
+
+.butao:active {
+    background-color: #818181;
+    transition: all 0.5s;
+}
+
